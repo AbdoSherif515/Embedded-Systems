@@ -81,7 +81,7 @@ u8   MNVIC_u8ReadActiveFlag     (u8 Copy_u8IntNumber)
 	return Local_u8FlagVlue;
 
 }
-void MNVIC_voidSetPriority      (u8 Copy_u8IntNumber,u8 Copy_u8GroupPriority,u8 Copy_u8SubPriority,u8 Copy_u8Option)
+void MNVIC_voidSetPriority      (u8 Copy_u8IntNumber,u8 Copy_u8GroupPriority,u8 Copy_u8SubPriority,u32 Copy_u8Option)
 {
 	u8 Local_u8Piriority = Copy_u8SubPriority | (Copy_u8GroupPriority << (Copy_u8Option-OPTION1)/256);
 	SCB_AICRCR = Copy_u8Option;
